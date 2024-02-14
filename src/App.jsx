@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Header from './components/Header'
 import './App.css'
 
 function App() {
@@ -6,8 +7,7 @@ function App() {
 
   return (
     <>
-      <h1>React website</h1>
-      <button className="bg-orange-500 text-white px-2 py-2 rounded-md">Hire me</button>
+      <Header/>
     </>
   )
 }
