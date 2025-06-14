@@ -1,65 +1,94 @@
-import { useState } from "react";
+import React from 'react';
+import logo from '/images/logo.png';
 
 const Header = () => {
-    const [brandName, setBrandName] = useState("Nahid Tamzid Hasan");
-    const [menuLinks, setMenuLinks] = useState([
-        {
-            title: "Home",
-            link: "/home",
-            id: 1,
-        },
-        {
-            title: "About",
-            link: "/about",
-            id: 2,
-        },
-        {
-            title: "Skills",
-            link: "/skills",
-            id: 3,
-        },
-        {
-            title: "Portfolio",
-            link: "/portfolio",
-            id: 4,
-        },
-        {
-            title: "Contact",
-            link: "/contact",
-            id: 5,
-        },
-    ]);
-    const [actionButton, setActionButton] = useState({
-        title: "Hire me",
-        link: "/hire-me",
-    });
-
-    return (
-        <>
-            <div className="h-20 border main flex justify-between items-center px-16 bg-gray-100">
-                <div>
-                    {/* Logo*/}
-                    <h1 className="text-2xl font-bold">{brandName}</h1>
-                </div>
-
-                <div className="space-x-6">
-                    {/* menu links*/}
-                    {menuLinks.map((link) => (
-                        <a key={link.id} href={link.link} className=" hover:text-orange-600">
-                            {link.title}
-                        </a>
-                    ))}
-                </div>
-
-                <div>
-                    {/* buttons */}
-                    <a href={actionButton.link} className="px-4 py-2 bg-orange-500 shadow rounded-full text-1xl">
-                        {actionButton.title}
-                    </a>
-                </div>
+  return (
+    <header className="header_area">
+      <div className="main_menu">
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <div className="container">
+            {/* Brand and toggle get grouped for better mobile display */}
+            <a className="navbar-brand logo_h" href="index.html">
+              <img src={logo} alt="Logo" />
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            {/* Collect the nav links, forms, and other content for toggling */}
+            <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul className="nav navbar-nav menu_nav justify-content-end">
+                <li className="nav-item active">
+                  <a className="nav-link" href="index.html">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="about.html">About</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="services.html">Services</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li className="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Pages
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li className="nav-item">
+                      <a className="nav-link" href="elements.html">Elements</a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="portfolio-details.html">Portfolio Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Blog
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li className="nav-item">
+                      <a className="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="single-blog.html">Blog Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
-        </>
-    );
-}
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

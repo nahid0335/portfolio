@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import './App.css'
+import "./app.css";
+import NavbarMain from "./components/navbar/NavbarMain";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <Header/>
-    </>
-  )
+  return ( 
+  <main className="font-body">
+    <NavbarMain/>
+  </main>
+  );
 }
 
-export default App
+export default App;
