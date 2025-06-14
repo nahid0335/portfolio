@@ -1,82 +1,39 @@
 import React from 'react';
-import logo from '../assets/images/logo.png';
-import logo1 from '../assets/images/brands/logo1.png';
-import logo2 from '../assets/images/brands/logo2.png';
-import logo3 from '../assets/images/brands/logo3.png';
-import logo4 from '../assets/images/brands/logo4.png';
-import logo5 from '../assets/images/brands/logo5.png';
-import logo6 from '../assets/images/brands/logo6.png';
-import logo7 from '../assets/images/brands/logo7.png';
-import logo8 from '../assets/images/brands/logo8.png';
-import logo9 from '../assets/images/brands/logo9.png';
-import homeRight from '../assets/images/banner/home-right.png';
-import aboutUs from '../assets/images/about-us.png';
-import s1 from '../assets/images/services/s1.png';
-import s2 from '../assets/images/services/s2.png';
-import s3 from '../assets/images/services/s3.png';
-import s4 from '../assets/images/services/s4.png';
-import p1 from '../assets/images/portfolio/p1.jpg';
-import p2 from '../assets/images/portfolio/p2.jpg';
-import p3 from '../assets/images/portfolio/p3.jpg';
-import p4 from '../assets/images/portfolio/p4.jpg';
-import p5 from '../assets/images/portfolio/p5.jpg';
-import p6 from '../assets/images/portfolio/p6.jpg';
-import p7 from '../assets/images/portfolio/p7.jpg';
-import p8 from '../assets/images/portfolio/p8.jpg';
-import p9 from '../assets/images/portfolio/p9.jpg';
-import t1 from '../assets/images/testimonials/t1.jpg';
-import t2 from '../assets/images/testimonials/t2.jpg';
+import Header from '../components/Header.jsx'
+import logo from '/images/logo.png';
+import logo1 from '/images/brands/logo1.png';
+import logo2 from '/images/brands/logo2.png';
+import logo3 from '/images/brands/logo3.png';
+import logo4 from '/images/brands/logo4.png';
+import logo5 from '/images/brands/logo5.png';
+import logo6 from '/images/brands/logo6.png';
+import logo7 from '/images/brands/logo7.png';
+import logo8 from '/images/brands/logo8.png';
+import logo9 from '/images/brands/logo9.png';
+import homeRight from '/images/banner/home-right.png';
+import aboutUs from '/images/about-us.png';
+import s1 from '/images/services/s1.png';
+import s2 from '/images/services/s2.png';
+import s3 from '/images/services/s3.png';
+import s4 from '/images/services/s4.png';
+import p1 from '/images/portfolio/p1.jpg';
+import p2 from '/images/portfolio/p2.jpg';
+import p3 from '/images/portfolio/p3.jpg';
+import p4 from '/images/portfolio/p4.jpg';
+import p5 from '/images/portfolio/p5.jpg';
+import p6 from '/images/portfolio/p6.jpg';
+import p7 from '/images/portfolio/p7.jpg';
+import p8 from '/images/portfolio/p8.jpg';
+import p9 from '/images/portfolio/p9.jpg';
+import t1 from '/images/testimonials/t1.jpg';
+import t2 from '/images/testimonials/t2.jpg';
 
 const HomePage = () => {
   return (
     <>
+    <Header/>
     {
         <div>
-            {/*--================ Start Header Area =================--*/}
-	        <header className="header_area">
-		        <div className="main_menu">
-			        <nav className="navbar navbar-expand-lg navbar-light">
-                        <div className="container">
-                            {/*-- Brand and toggle get grouped for better mobile display --*/}
-                            <a className="navbar-brand logo_h" href="index.html"><img src={logo} alt=""/></a>
-                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                            </button>
-                            {/*-- Collect the nav links, forms, and other content for toggling --*/}
-                            <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
-                                <ul className="nav navbar-nav menu_nav justify-content-end">
-                                    <li className="nav-item active"><a className="nav-link" href="index.html">Home</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="about.html">About</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="services.html">Services</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="portfolio.html">Portfolio</a></li>
-                                    <li className="nav-item submenu dropdown">
-                                        <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                            aria-expanded="false">Pages</a>
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item"><a className="nav-link" href="elements.html">Elements</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item submenu dropdown">
-                                        <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                            aria-expanded="false">Blog</a>
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item"><a className="nav-link" href="blog.html">Blog</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="single-blog.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-			        </nav>
-		        </div>
-	        </header>
-	        {/*--================ End Header Area =================--*/}
-
 	        {/*--================ Start Home Banner Area =================--*/}
             <section className="home_banner_area">
                 <div className="banner_inner">
@@ -614,24 +571,6 @@ const HomePage = () => {
                 </div>
             </footer>
             {/*--================End Footer Area =================--*/}
-
-            {/*-- Optional JavaScript --*/
-            /*-- jQuery first, then Popper.js, then Bootstrap JS --*/}
-            <script src="/assets/js/jquery-3.2.1.min.js"></script>
-            <script src="/assets/js/popper.js"></script>
-            <script src="/assets/js/bootstrap.min.js"></script>
-            <script src="/assets/js/stellar.js"></script>
-            <script src="/assets/js/jquery.magnific-popup.min.js"></script>
-            <script src="/assets/vendors/nice-select/js/jquery.nice-select.min.js"></script>
-            <script src="/assets/vendors/isotope/imagesloaded.pkgd.min.js"></script>
-            <script src="/assets/vendors/isotope/isotope-min.js"></script>
-            <script src="/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-            <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
-            <script src="/assets/js/mail-script.js"></script>
-            {/*--gmaps Js--*/}
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-            <script src="/assets/js/gmaps.min.js"></script>
-            <script src="/assets/js/theme.js"></script>
         </div>
     }
     </>
